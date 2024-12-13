@@ -1,3 +1,45 @@
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.MCbutton {
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+  padding: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: rgb(223, 223, 223);
+  border-left: 3px solid white;
+  border-top: 3px solid white;
+  border-right: 3px solid gray;
+  border-bottom: 3px solid gray;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.1rem;
+  font-weight: 900;
+  outline: 2px solid black;
+}
+
+.MCbutton:hover {
+  background-color: #d17b3d; /* Darker, brownish-orange for hover */
+  color: white; /* Matching the background color for outline */
+  border-left: 3px solid white; /* White left border */
+  border-top: 3px solid white; /* White top border */
+  border-right: 3px solid #808080; /* Medium gray for right border */
+  border-bottom: 3px solid #808080; /* Medium gray for bottom border */
+}
+
+.MCbutton:active {
+  background-color: #9e5c2f; /* Darker orange-brown for active state */
+  color: white; /* Matching outline for active state */
+  border-left: 3px solid white; /* White left border */
+  border-top: 3px solid white; /* White top border */
+  border-right: 3px solid #6b6b6b; /* Darker gray for right border */
+  border-bottom: 3px solid #6b6b6b; /* Darker gray for bottom border */
+}
