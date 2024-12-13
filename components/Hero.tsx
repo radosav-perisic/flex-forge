@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -39,31 +40,74 @@ const Hero = () => {
       ></div>
 
       <div className="relative flex flex-col items-center justify-center w-full h-full z-10">
-        <h1 className="text-white md:hidden text-4xl text-center md:text-4xl lg:text-5xl font-bold mb-4 mx-1">
+        {/* Animated Title */}
+        <motion.h1
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="text-white md:hidden text-4xl text-center md:text-4xl lg:text-5xl p font-bold mb-2 mx-1"
+        >
           FlexForge Digital Craftmanship
-        </h1>
-        <h1 className="text-white hidden md:flex text-6xl text-center  font-bold mb-8 mx-1">
-          FlexForge Digital 
-        </h1>
-        <h1 className="text-white hidden md:flex text-6xl text-center  font-bold mb-8 mx-1">
+        </motion.h1>
+
+        <motion.h1
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+          className="text-white hidden md:flex text-6xl text-center font-bold mb-8 mx-1"
+        >
+          FlexForge Digital
+        </motion.h1>
+
+        <motion.h1
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+          className="text-white hidden md:flex text-6xl text-center font-bold mb-8 mx-1"
+        >
           Craftmanship
-        </h1>
+        </motion.h1>
 
         {/* Forge GIF */}
-        <img
+        <motion.img
           src="/src/assets/forge.gif"
           alt="Forge Animation"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 1.5,
+            ease: "easeOut",
+            type: "spring",
+            stiffness: 70,
+          }}
           className="w-72 h-72 md:w-72 md:h-72 lg:w-96 lg:h-96"
         />
 
-        <p className="text-white text-center max-w-md sm:max-w-lg md:max-w-xl text-base sm:text-base md:text-lg mb-6 mx-1">
-          Forging custom web components, websites, redesigns, and SEO optimization to elevate your digital presence.
-        </p>
+        {/* Animated Intro Text */}
+        <motion.p
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 1 }}
+          className="text-white text-center leading-[18px] md:leading-normal tracking-[-0.07rem] max-w-md sm:max-w-lg md:max-w-xl text-base sm:text-base md:text-xl 
+          mb-3 mx-1"
+        >
+          Forging custom web components, websites, redesigns, and SEO
+          optimization to elevate your digital presence.
+        </motion.p>
 
         {/* Explore Button */}
-        <button className="MCbutton tracking-widest">
+        <motion.button
+          className="MCbutton tracking-widest"
+          initial={{ opacity: 0, y: 50 }} // Starts off-screen below
+          animate={{ opacity: 1, y: 0 }} // Animates into view
+          transition={{
+            duration: 1,
+            ease: "easeOut",
+            delay: 1.35, // Adjust delay to sync with other animations
+          }}
+        >
           EXPLORE
-        </button>
+        </motion.button>
       </div>
     </section>
   );
