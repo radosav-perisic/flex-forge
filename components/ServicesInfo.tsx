@@ -133,7 +133,7 @@ const ServicesInfo = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Maintain a Secure, High-Performance Website That Runs Seamlessly
+              Maintain a Secure, Efficient Website That Runs Seamlessly
             </motion.h2>
 
             <motion.p
