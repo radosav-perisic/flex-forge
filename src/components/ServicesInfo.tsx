@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import SEO from "../src/assets/ServicesInfo-Redesign.png";
+import SEO from "../assets/ServicesInfo-Redesign.png";
 
 const ServicesInfo = () => {
   return (
