@@ -11,7 +11,7 @@ function App() {
       <div>
       <Navbar />
         <Routes>
-          {/* Home route - renders the common components */}
+
           <Route
             path="/"
             element={
@@ -24,7 +24,7 @@ function App() {
             }
           />
 
-          {/* CustomWebsite route - only renders the CustomWebsite component */}
+
           <Route path="/custom-website" element={<CustomWebsite />} />
         </Routes>
       </div>
