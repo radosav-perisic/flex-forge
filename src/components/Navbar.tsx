@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import logo from '../../public/FF.png'
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -35,20 +36,21 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-transparent  text-white shadow-md">
-      <div className="container mx-auto flex items-center justify-between px-6 py-4">
+    <nav className="absolute top-0 left-0 w-full z-50 bg-transparent text-white shadow-md">
+      <div className="flex items-center mx-4 justify-between px-6 py-4">
         
         {/* Start Section: Logo */}
-        <div className="flex items-center w-1/4">
+        <div className="flex items-center font-bold text-xl gap-x-2">
           <img
-            src="/path/to/your/logo.png"
+            src={logo}
             alt="Logo"
-            className="h-8 sm:h-10"
+            className="h-14"
           />
+          <span>FlexForge</span>
         </div>
         
         {/* Center Section: Navigation Buttons */}
-        <div className="hidden md:flex items-center justify-center space-x-12 flex-grow">
+        <div className="hidden md:flex items-center space-x-12">
           <div className="relative">
             <button 
               className="text-xl font-bold hover:text-gray-500 duration-150"
@@ -58,12 +60,12 @@ const Navbar = () => {
               }}
             >
               Services <span
-        className={`inline-block transition-transform duration-300 ${
-          isArrowRotated ? "rotate-90" : "rotate-0"
-        }`}
-      >
-        ➸
-      </span>
+                className={`inline-block transition-transform duration-300 ${
+                  isArrowRotated ? "rotate-90" : "rotate-0"
+                }`}
+              >
+                ➸
+              </span>
             </button>
             {servicesOpen && (
               <div className="absolute top-full left-0 bg-black bg-opacity-90 rounded-md py-2 w-48">
@@ -84,7 +86,7 @@ const Navbar = () => {
         </div>
         
         {/* End Section: "Hello World" Button */}
-        <div className="hidden md:flex items-center justify-end w-1/4">
+        <div className="hidden md:flex items-center">
           <button className="bg-orange-500 text-white font-medium px-4 py-2 sm:px-6 sm:py-2 rounded-md hover:bg-orange-600 duration-200 text-sm sm:text-base">
             hello world
           </button>
