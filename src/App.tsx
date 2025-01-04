@@ -4,6 +4,7 @@ import Hero from "../src/components/Hero";
 import Services from "../src/components/Services";
 import ServicesInfo from "../src/components/ServicesInfo";
 import CustomWebsite from "../src/pages/CustomWebsite";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
 
           <Route path="/custom-website" element={<CustomWebsite />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
