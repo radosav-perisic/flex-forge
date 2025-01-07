@@ -4,7 +4,7 @@ import SEO from "../assets/ServicesInfo-Redesign.png";
 
 const ServicesInfo = () => {
   return (
-    <section className="w-full relative bg-gradient-to-b from-orange-800 to-black py-16 md:py-24">
+    <section className="w-full relative bg-gradient-to-b overflow-hidden from-orange-800 to-black py-16 md:py-24">
       <div className="absolute top-0 left-0 w-full h-auto">
         <svg
           id="visual"
