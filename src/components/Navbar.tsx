@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import logo from '../../public/FF.png'
+import logo from "../../public/FF.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,36 +31,32 @@ const Navbar = () => {
   }, []);
 
   const serviceOptions = [
-    "Custom Website",
-    "SEO Improvement",
-    "Website Redesign"
+    { name: "Custom Website", route: "/custom-website" },
+    { name: "SEO Improvement", route: "/seo-improvement" },
+    { name: "Website Redesign", route: "/website-redesign" },
   ];
 
   return (
     <nav className="absolute top-0 left-0 w-full z-50 bg-transparent text-white shadow-md">
       <div className="flex items-center mx-4 justify-between px-6 py-4">
-        
         {/* Start Section: Logo */}
         <div className="flex items-center font-bold text-xl gap-x-2">
-          <img
-            src={logo}
-            alt="Logo"
-            className="h-14"
-          />
+          <img src={logo} alt="Logo" className="h-14" />
           <span>FlexForge</span>
         </div>
-        
+
         {/* Center Section: Navigation Buttons */}
         <div className="hidden md:flex items-center space-x-12">
           <div className="relative">
-            <button 
+            <button
               className="text-xl font-bold hover:text-gray-500 duration-150"
               onClick={(e) => {
-                e.stopPropagation(); 
+                e.stopPropagation();
                 toggleArrowAndServices();
               }}
             >
-              Services <span
+              Services{" "}
+              <span
                 className={`inline-block transition-transform duration-300 ${
                   isArrowRotated ? "rotate-90" : "rotate-0"
                 }`}
@@ -70,28 +67,33 @@ const Navbar = () => {
             {servicesOpen && (
               <div className="absolute top-full left-0 bg-black bg-opacity-90 rounded-md py-2 w-48">
                 {serviceOptions.map((option, index) => (
-                  <button 
-                    key={index}
-                    className="block w-full text-left px-4 py-2 text-sm hover:bg-orange-500 duration-200"
-                    onClick={closeMenusAndResetArrow}
-                  >
-                    {option}
-                  </button>
+                <Link
+                key={index}
+                to={option.route}
+                className="block w-full text-left px-4 py-2 text-sm hover:bg-orange-500 duration-200"
+                onClick={closeMenusAndResetArrow}
+              >
+                {option.name}
+              </Link>
                 ))}
               </div>
             )}
           </div>
-          <button className="text-xl font-bold hover:text-gray-500 duration-150">About</button>
-          <button className="text-xl font-bold hover:text-gray-500 duration-150">Contact</button>
+          <button className="text-xl font-bold hover:text-gray-500 duration-150">
+            About
+          </button>
+          <button className="text-xl font-bold hover:text-gray-500 duration-150">
+            Contact
+          </button>
         </div>
-        
+
         {/* End Section: "Hello World" Button */}
         <div className="hidden md:flex items-center">
           <button className="bg-orange-500 text-white font-medium px-4 py-2 sm:px-6 sm:py-2 rounded-md hover:bg-orange-600 duration-200 text-sm sm:text-base">
             hello world
           </button>
         </div>
-        
+
         {/* Hamburger Menu Icon */}
         <div
           className="flex md:hidden items-center cursor-pointer"
@@ -109,7 +111,7 @@ const Navbar = () => {
       {menuOpen && (
         <div className="md:hidden flex flex-col items-center space-y-4 bg-black bg-opacity-90 py-4">
           <div className="relative w-full text-center">
-            <button 
+            <button
               className="text-lg font-medium hover:text-gray-500 duration-150"
               onClick={closeMenusAndResetArrow}
             >
@@ -118,19 +120,24 @@ const Navbar = () => {
             {servicesOpen && (
               <div className="bg-black bg-opacity-90 py-2 w-full">
                 {serviceOptions.map((option, index) => (
-                  <button 
-                    key={index}
-                    className="block w-full text-center py-2 text-sm hover:bg-orange-500 duration-200"
-                    onClick={closeMenusAndResetArrow}
-                  >
-                    {option}
-                  </button>
+                  <Link
+                  key={index}
+                  to={option.route}
+                  className="block w-full text-left px-4 py-2 text-sm hover:bg-orange-500 duration-200"
+                  onClick={closeMenusAndResetArrow}
+                >
+                  {option.name}
+                </Link>
                 ))}
               </div>
             )}
           </div>
-          <button className="text-lg font-medium hover:text-gray-500 duration-150">About</button>
-          <button className="text-lg font-medium hover:text-gray-500 duration-150">Contact</button>
+          <button className="text-lg font-medium hover:text-gray-500 duration-150">
+            About
+          </button>
+          <button className="text-lg font-medium hover:text-gray-500 duration-150">
+            Contact
+          </button>
           <button className="bg-orange-500 text-white font-medium px-4 py-2 rounded-md hover:bg-orange-600 duration-150">
             hello world
           </button>
@@ -141,4 +148,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
