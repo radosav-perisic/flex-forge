@@ -169,7 +169,7 @@ const CustomWebsite = () => {
           </div>
 
           <motion.div 
-            className=" sm:w-3/4 md:w-2/3 lg:w-1/4"
+            className="w-full sm:w-3/4 md:w-2/3 lg:w-1/4 "
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -185,12 +185,8 @@ const CustomWebsite = () => {
       </div>
 
       {/* Services Section */}
-      <motion.section 
+      <section 
         className="px-4 sm:px-6 lg:px-8 py-20 bg-gradient-to-t from-black to-orange-700"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
       >
         <div className="max-w-7xl mx-auto">
           <motion.h2 
@@ -203,7 +199,7 @@ const CustomWebsite = () => {
             Master Crafted Digital Solutions
           </motion.h2>
           
-          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -228,15 +224,11 @@ const CustomWebsite = () => {
             ))}
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Process Section */}
-      <motion.section 
+      <section 
         className="px-4 sm:px-6 lg:px-8 py-20 bg-gradient-to-b from-black to-orange-700"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
       >
         <div className="max-w-7xl mx-auto">
           <motion.h2 
@@ -279,15 +271,11 @@ const CustomWebsite = () => {
             </motion.div>
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Features Section */}
-      <motion.section 
+      <section 
         className="px-4 sm:px-6 lg:px-8 py-20 bg-gradient-to-t from-black to-orange-700"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
       >
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -329,15 +317,11 @@ const CustomWebsite = () => {
             </div>
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Pricing Section */}
-      <motion.section 
+      <section 
         className="px-4 sm:px-6 lg:px-8 py-20 bg-gradient-to-b from-black to-orange-700"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
       >
         <div className="max-w-7xl mx-auto">
           <motion.h2 
@@ -350,7 +334,7 @@ const CustomWebsite = () => {
             Choose Your Arsenal
           </motion.h2>
 
-          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {tiers.map((tier, index) => (
               <motion.div
                 key={index}
@@ -377,7 +361,7 @@ const CustomWebsite = () => {
             ))}
           </div>
         </div>
-      </motion.section>
+      </section>
     </div>
   )
 }
