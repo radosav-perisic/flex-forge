@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
       </div>
       <div className="relative z-10 container mx-auto px-4 py-4 text-center text-sm border-t border-gray-800 mt-8">
         <p>
-          &copy; {new Date().getFullYear()} Your Company Name. All rights
+          &copy; {new Date().getFullYear()} FlexForge. All rights
           reserved.
         </p>
       </div>
