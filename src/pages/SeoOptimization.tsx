@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Search, BarChart, Zap, ArrowRight, Target, Cpu, BarChartIcon as ChartBar, Users, FileSearch, Check, Hammer, Flame, Shield } from 'lucide-react'
 
-const SeoImprovement: React.FC = () => {
+const SeoOptimization: React.FC = () => {
   const seoServices = [
     {
       icon: <Search className="w-16 h-16 text-[#FACC15]" />,
@@ -410,5 +410,5 @@ const SeoImprovement: React.FC = () => {
   )
 }
 
-export default SeoImprovement
+export default SeoOptimization
 
