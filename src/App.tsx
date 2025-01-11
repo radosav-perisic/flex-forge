@@ -5,6 +5,7 @@ import Services from "../src/components/Services";
 import ServicesInfo from "../src/components/ServicesInfo";
 import CustomWebsite from "../src/pages/CustomWebsite";
 import Footer from "./components/Footer";
+import SeoOptimization from "./pages/SeoOptimization";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           />
 
           <Route path="/custom-website" element={<CustomWebsite />} />
+          <Route path="/seo-optimization" element={<SeoOptimization />} />
         </Routes>
         <Footer />
       </div>
