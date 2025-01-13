@@ -32,7 +32,7 @@ const Navbar = () => {
 
   const serviceOptions = [
     { name: "Custom Website", route: "/custom-website" },
-    { name: "SEO Improvement", route: "/seo-improvement" },
+    { name: "SEO Optimization", route: "/seo-optimization" },
     { name: "Website Redesign", route: "/website-redesign" },
   ];
 
@@ -79,9 +79,9 @@ const Navbar = () => {
               </div>
             )}
           </div>
-          <button className="text-xl font-bold hover:text-gray-500 duration-150">
-            About
-          </button>
+          <Link to='/about-us' className="text-xl font-bold hover:text-gray-500 duration-150">
+            About Us
+          </Link>
           <button className="text-xl font-bold hover:text-gray-500 duration-150">
             Contact
           </button>
