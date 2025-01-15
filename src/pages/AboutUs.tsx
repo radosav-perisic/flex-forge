@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Hammer, Shield, Zap, Users, Trophy, Target, ArrowRight } from 'lucide-react'
+import about from '../assets/about.png'
 
 const AboutUs: React.FC = () => {
   const companyValues = [
@@ -99,7 +100,7 @@ const AboutUs: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <img src="/placeholder.svg?height=400&width=600" alt="Our Journey" className="rounded-lg shadow-2xl" />
+              <img src={about} alt="About" className="rounded-lg shadow-2xl" />
             </motion.div>
             <motion.div
               className="space-y-6"
