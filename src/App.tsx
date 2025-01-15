@@ -6,6 +6,8 @@ import ServicesInfo from "../src/components/ServicesInfo";
 import CustomWebsite from "../src/pages/CustomWebsite";
 import Footer from "./components/Footer";
 import SeoOptimization from "./pages/SeoOptimization";
+import WebsiteRedesign from "./pages/WebsiteRedesign";
+
 import AboutUs from "./pages/AboutUs";
 
 function App() {
@@ -27,6 +29,7 @@ function App() {
 
           <Route path="/custom-website" element={<CustomWebsite />} />
           <Route path="/seo-optimization" element={<SeoOptimization />} />
+          <Route path="/website-redesign" element={<WebsiteRedesign />} />
           <Route path="/about-us" element={<AboutUs />} />
         </Routes>
         <Footer />
