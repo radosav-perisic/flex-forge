@@ -8,21 +8,21 @@ const WebsiteRedesign: React.FC = () => {
       icon: <Palette className="w-16 h-16 text-[#FACC15]" />,
       backgroundIcon: <Palette className="w-64 h-64 text-[#FACC15] opacity-5" />,
       title: "UI/UX Overhaul",
-      description: "We reimagine your website's look and feel, crafting intuitive interfaces and engaging user experiences. Our expert designers blend aesthetics with functionality to create a site that captivates and converts.",
+      description: "We reimagine and transform your website’s look and feel, crafting intuitive, engaging user experiences that captivate visitors and drive conversions.",
       action: "Explore UI/UX"
-    },
+    },  
     {
       icon: <Layout className="w-16 h-16 text-[#FACC15]" />,
       backgroundIcon: <Layout className="w-64 h-64 text-[#FACC15] opacity-5" />,
-      title: "Responsive Restructuring",
-      description: "We rebuild your site to be fully responsive, ensuring a seamless experience across all devices. Our approach prioritizes mobile-first design while optimizing for desktops, tablets, and everything in between.",
+      title: "Responsive Redesign",
+      description: "We rebuild your site to be fully responsive, delivering seamless functionality and a consistent experience across all devices, from mobile to desktop.  ",
       action: "See Responsive Design"
     },
     {
       icon: <Zap className="w-16 h-16 text-[#FACC15]" />,
       backgroundIcon: <Zap className="w-64 h-64 text-[#FACC15] opacity-5" />,
       title: "Performance Boost",
-      description: "We optimize your website's speed and efficiency, creating a lightning-fast user experience. Our team employs cutting-edge techniques to minimize load times and maximize engagement.",
+      description: "We enhance your website’s speed and efficiency. Our team employs cutting-edge techniques to minimizine load times creating a fast and engaging user experience.",
       action: "Boost Performance"
     }
   ]
