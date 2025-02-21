@@ -1,7 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Hammer, Shield, Zap, Users, Trophy, Target, ArrowRight } from 'lucide-react'
+import { Hammer, Shield, Zap, Users, ArrowRight } from 'lucide-react'
 import about from '../assets/about.png'
+import CountUp from 'react-countup'
 
 const AboutUs: React.FC = () => {
   const companyValues = [
@@ -28,11 +29,11 @@ const AboutUs: React.FC = () => {
   ]
 
   const achievements = [
-    { number: "500+", label: "Projects Completed" },
-    { number: "50+", label: "Awards Won" },
-    { number: "100%", label: "Client Satisfaction" },
-    { number: "10+", label: "Years of Excellence" }
-  ]
+    { number: 500, suffix: '+', label: 'Projects Completed' },
+    { number: 50, suffix: '+', label: 'Websites Reconstructed' },
+    { number: 100, suffix: '+', label: 'Optimized Rankings' },
+    { number: 10, suffix: '+', label: 'Years of Excellence' },
+  ];
 
   const teamMembers = [
     {
@@ -176,7 +177,14 @@ const AboutUs: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <h3 className="text-4xl font-bold mb-2 text-[#FACC15]">{achievement.number}</h3>
+                 <div className="text-4xl font-bold mb-2 text-[#FACC15]">
+                  <CountUp
+                    start={0}
+                    end={achievement.number}
+                    duration={6}
+                    suffix={achievement.suffix}
+                  />
+                </div>
                 <p className="text-gray-300 text-lg">{achievement.label}</p>
               </motion.div>
             ))}
