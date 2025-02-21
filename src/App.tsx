@@ -9,6 +9,7 @@ import SeoOptimization from "./pages/SeoOptimization";
 import WebsiteRedesign from "./pages/WebsiteRedesign";
 
 import AboutUs from "./pages/AboutUs";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/seo-optimization" element={<SeoOptimization />} />
           <Route path="/website-redesign" element={<WebsiteRedesign />} />
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>
